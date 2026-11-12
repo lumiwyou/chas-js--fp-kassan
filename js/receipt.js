@@ -2,14 +2,14 @@
 
 
 //   findProduct(products, id)            -> produkten
- const findProduct = (products, id) => products.find((product) => product.id === id);
+export const findProduct = (products, id) => products.find((product) => product.id === id);
 
 
 //   lineTotal(line, products)            -> pris × antal
  const lineTotal = (line, products) => findProduct(products, line.productId).price * line.quantity;
 
 //   subtotal(lines, products)            -> summan av alla rader (reduce)
-const subTotal = (lines, products) => lines.reduce((sum, line) => sum + lineTotal(line, products), 0);
+export const subTotal = (lines, products) => lines.reduce((sum, line) => sum + lineTotal(line, products), 0);
 
 //   applyDiscount(amount, code, codes)   -> beloppet efter rabatt
  const applyDiscount = (amount, code, codes) => {
