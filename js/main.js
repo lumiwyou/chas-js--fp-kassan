@@ -1,5 +1,5 @@
 // Kassan
-//import { checkout } from './kassa-imperativ.js';
+import { checkout } from './kassa-imperativ.js';
 import { products, lines, discountCodes, VAT_RATE } from './data.js'
 import { formatReceipt } from "./receipt.js";
 import { createCart } from './cart.js'
