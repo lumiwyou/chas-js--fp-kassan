@@ -2,7 +2,7 @@
 //import { checkout } from './kassa-imperativ.js';
 import { products, lines, discountCodes, VAT_RATE } from './data.js'
 import { formatReceipt } from "./receipt.js";
-import { createCart } from './cart.js' // TODO TILL TORSDAG
+import { createCart } from './cart.js'
  
 // 1. Kör den gamla kassan. Kör den sedan en gång till, med samma rabattkod.
 // TODO: Gissa först. Blir kvittot detsamma båda gångerna? Varför inte?
