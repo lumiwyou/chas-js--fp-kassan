@@ -4,7 +4,7 @@
 // createCart skapar variabeln lines. Funktionerna som returneras (add, remove ...)
 // kan läsa och byta ut den, men ingen utanför varukorgen kommer åt den direkt.
 //
-import { findProduct, subtotal } from "receipt.js"
+import { findProduct, subTotal } from "./receipt.js"
 
 export const createCart = (products) => {
   // Varukorgens minne. let, eftersom du byter ut arrayen vid varje ändring. //? NOTE: add/remove ska överskriva utan .push() eller .pop()
@@ -36,6 +36,6 @@ export const createCart = (products) => {
     add,
     remove,
     lines: () => [...lines], // Returnerar shallow copy
-    total: () => subtotal(lines, products)
+    total: () => subTotal(lines, products)
   };
 };
